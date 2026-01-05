@@ -1,0 +1,15 @@
+services:
+  z2api-nest:
+    build: .
+    image: z2api-nest
+    container_name: z2api-nest
+    ports:
+      - '8080:8080'
+    environment:
+      - TOKEN=
+      - PORT=8080
+      - DEBUG=false
+      - DEBUG_MSG=false
+      - THINK_TAGS_MODE=reasoning
+      - MODEL=glm-4.7
+    restart: unless-stopped
